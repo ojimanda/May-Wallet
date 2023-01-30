@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1046305750902",
+    "project_id": "may-wallet-6020c",
+    "storage_bucket": "may-wallet-6020c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046305750902:android:d275111c239e8870df8457",
+        "android_client_info": {
+          "package_name": "id.yozi.may_wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046305750902-fa96v5elqe0bmnrel4m9p275lqn28cca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDslPXdttzFJZP2GUR_vOCeofmfvoIibRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046305750902-fa96v5elqe0bmnrel4m9p275lqn28cca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

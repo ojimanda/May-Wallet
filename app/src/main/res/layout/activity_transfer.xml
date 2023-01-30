@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#FFEC00"
+    android:layout_height="match_parent"
+    tools:context=".pages.Transfer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btnTransferBack"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:background="@color/transparent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dosis_book"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:text="Email tujuan"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/emailTransfer"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:hint="Email"
+                    android:textColorHint="@color/black"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginVertical="10dp"
+                android:id="@+id/cekPenerima"
+                android:layout_height="wrap_content"
+                android:textColor="#FFEC00"
+                android:backgroundTint="#505050"
+                android:text="Cek Penerima" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/dosis_book"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:text="Nominal"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nominalTransfer"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:hint="Nominal"
+                    android:textColorHint="@color/black"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/btnTransfer"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="SEND"
+                android:textColor="#FFEC00"
+                android:backgroundTint="#505050"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
