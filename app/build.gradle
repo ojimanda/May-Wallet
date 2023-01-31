@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "id.yozi.may_wallet"
-        minSdk 21
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -35,10 +35,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.firebase:firebase-analytics:21.2.0'
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:31.2.0')
-
-
+    implementation 'com.google.firebase:firebase-storage'
     // Declare the dependency for the Cloud Firestore library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-firestore'

@@ -48,12 +48,18 @@ public class Transfer extends AppCompatActivity {
 
         Intent intent = getIntent();
         String email = intent.getStringExtra("email");
+        String email_penerima = intent.getStringExtra("emailPenerima");
 
         btnBack = findViewById(R.id.btnTransferBack);
         send = findViewById(R.id.btnTransfer);
         cekPenerima = findViewById(R.id.cekPenerima);
         etEmail = findViewById(R.id.emailTransfer);
         etNominal = findViewById(R.id.nominalTransfer);
+
+
+        if(email_penerima != null) {
+            etEmail.setText(email_penerima);
+        }
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
