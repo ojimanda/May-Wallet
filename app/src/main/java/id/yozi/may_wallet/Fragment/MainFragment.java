@@ -22,8 +22,12 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.zxing.integration.android.IntentIntegrator;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 import id.yozi.may_wallet.R;
+import id.yozi.may_wallet.adapter.SliderAdapterExample;
 import id.yozi.may_wallet.pages.Dashboard;
 import id.yozi.may_wallet.pages.Gold;
 import id.yozi.may_wallet.pages.Transfer;
@@ -47,6 +51,13 @@ public class MainFragment extends Fragment {
     private LinearLayout topup, transfer, electricity, gold;
     private TextView txAmount;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    // slider
+    private  int images[];
+    private  String text[];
+    private SliderAdapterExample adapter;
+    private SliderView sliderView;
+
 
     public MainFragment() {
         // Required empty public constructor
@@ -93,6 +104,17 @@ public class MainFragment extends Fragment {
         Dashboard dashboard =(Dashboard) getActivity();
         assert dashboard != null;
         String email = dashboard.getEmail();
+
+
+        sliderView = view.findViewById(R.id.imageSlider);
+        images = new int[] {R.drawable.promoone, R.drawable.promotwo, R.drawable.promothree, R.drawable.promofour};
+        text = new String[] {"", "", "", ""};
+        adapter = new SliderAdapterExample(images, text);
+        sliderView.setSliderAdapter(adapter);
+        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
+        sliderView.startAutoCycle();
+
 
         db.collection("users")
                         .whereEqualTo("email", email)
